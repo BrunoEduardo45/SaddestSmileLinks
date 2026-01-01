@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saddest Smile - Enigma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Carregando a sua fonte local */
+        @font-face {
+            font-family: 'Gorilla';
+            src: url('gorilla.ttf') format('truetype'); /* Certifica-te que o ficheiro está na pasta */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Rage';
+            src: url('RAGE.ttf') format('truetype'); /* Certifica-te que o ficheiro está na pasta */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Fallback caso a fonte não carregue */
+        :root {
+            --primary-font: 'Gorilla', 'Courier New', Courier, monospace;
+            --secondary-font: 'Rage', 'Courier New', Courier, monospace;
+
+        }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: var(--primary-font);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 20px;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        /* Topo com Logo */
+        .logo-banda {
+            width: 100px;
+            height: auto;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            letter-spacing: 4px;
+            margin: 10px 0;
+            /*font-family: var(--secondary-font);*/
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        /* Estilo dos Links */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-card {
+            border: 1px solid #222;
+            padding: 18px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .link-card i {
+            font-size: 1.2rem;
+            width: 20px;
+        }
+
+        .link-card:hover {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Destaque para o Clipe */
+        .clipe-destaque {
+            border-color: #444;
+            background: rgba(255, 255, 255, 0.05);
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.7rem;
+            color: #333;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="main-container">
+        <header>
+            <img src="logo.png" alt="Saddest Smile Logo" class="logo-banda">
+            <h1>Saddest Smile</h1>
+            <p>Álbum "Enigma" já disponível</p>
+        </header>
+
+        <main class="links">
+            <a href="https://www.youtube.com/watch?v=07n2TwCghxY&list=RD07n2TwCghxY&start_radio=1" target="_blank" class="link-card clipe-destaque">
+                <i class="fa-solid fa-play"></i> Clipe Oficial: Vergogna
+            </a>
+
+            <a href="URL_SPOTIFY" target="_blank" class="link-card">
+                <i class="fa-brands fa-spotify"></i> Spotify
+            </a>
+
+            <a href="URL_YOUTUBE_MUSIC" target="_blank" class="link-card">
+                <i class="fa-solid fa-music"></i> YouTube Music
+            </a>
+
+            <a href="URL_APPLE_MUSIC" target="_blank" class="link-card">
+                <i class="fa-brands fa-apple"></i> Apple Music
+            </a>
+
+            <a href="URL_DEEZER" target="_blank" class="link-card">
+                <i class="fa-brands fa-deezer"></i> Deezer
+            </a>
+
+            <a href="https://www.instagram.com/saddestsmileband/" target="_blank" class="link-card">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+        </main>
+
+        <footer>
+            <p>© 2026 SADDEST SMILE</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efeito de entrada suave
+        window.onload = () => {
+            const container = document.getElementById('main-container');
+            container.style.opacity = 1;
+        };
+    </script>
+</body>
+</html>
